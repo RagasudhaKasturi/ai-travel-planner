@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #faf6ec;
+  }
+  body {
+    @apply font-body text-ink bg-parchment antialiased;
+    background-image: radial-gradient(circle at 1px 1px, rgba(27, 58, 75, 0.06) 1px, transparent 0);
+    background-size: 18px 18px;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Boarding-pass style trip stub: a notch cut on the right edge */
+  .boarding-pass {
+    position: relative;
+    border: 1.5px dashed theme('colors.ticketBorder');
+  }
+  .boarding-pass::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -9px;
+    width: 18px;
+    height: 18px;
+    background: theme('colors.parchment');
+    border: 1.5px dashed theme('colors.ticketBorder');
+    border-radius: 9999px;
+    transform: translateY(-50%);
+  }
+
+  /* Passport-stamp day badge */
+  .stamp-badge {
+    @apply font-mono font-semibold;
+    border: 2px solid currentColor;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .stamp-badge::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px dashed currentColor;
+    border-radius: 9999px;
+    opacity: 0.5;
+  }
+}
