@@ -1,4 +1,4 @@
-# Trao — AI Travel Planner
+# Trao - AI Travel Planner
 
 > A full-stack, multi-user AI travel planning app that generates day-by-day itineraries, estimates budgets, suggests hotels, and lets you edit everything live — plus a custom **Weather-Aware Packing Assistant**.
 
@@ -365,8 +365,8 @@ The packing list is generated **in the same Gemini call** as the itinerary — m
 
 | Component | Platform | URL |
 |---|---|---|
-| Backend API | Render | `https://YOUR_APP.onrender.com` |
-| Frontend | Vercel | `https://YOUR_APP.vercel.app` |
+| Backend API | Render | `https://ai-travel-planner-fidf.onrender.com` |
+| Frontend    | Vercel | `https://ai-travel-planner-cyan.vercel.app`   |
 
 > Update these URLs after deploying. Full deployment steps are in the [VSCode Setup & Deployment Guide](./VSCODE_SETUP_GUIDE.md).
 
